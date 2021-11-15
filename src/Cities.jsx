@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Select from 'react-select';
+
 export default function Cities (){
 
     const citiesData = [
@@ -31,14 +33,9 @@ export default function Cities (){
 
     return (
         <>
-            {citiesData.map((data,index)=>{
-                return (
-                    <>
-                        {data.label}
-                    </>
-                )
-            })}
-
+            <Select 
+                options={citiesData}
+            />
         </>
     )
 
